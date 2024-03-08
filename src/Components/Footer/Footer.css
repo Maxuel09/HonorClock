@@ -1,0 +1,66 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form div {
+
+    margin-bottom: 10px;
+}
+
+.contact-form label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #D5A021;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #A49694;
+}
+
+.form-group {
+    width: 23%;
+}
+
+ul {
+    list-style-type: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    
+    text-decoration: none;
+    margin-bottom: 5px;
+
+}
+
+.white-icon {
+    fill: white;
+}
