@@ -20,7 +20,7 @@ const router = createBrowserRouter([
                 element: <Relojes />
             },
             {
-                path: "/HC/Categorías",
+                path: "/HC/Categorias",
                 element: <Categories />
             },
             {
