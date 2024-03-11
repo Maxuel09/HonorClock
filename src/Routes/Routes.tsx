@@ -4,6 +4,7 @@ import Relojes from "../Pages/Relojes";
 import Rebajas from "../Pages/Rebajas";
 import Root from "../Routes/Root";
 import SignIn from "../Pages/SignIn";
+import Categories from "../Pages/Categories";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
             {
                 path: "/HC/Relojes",
                 element: <Relojes />
+            },
+            {
+                path: "/HC/Categorías",
+                element: <Categories />
             },
             {
                 path: "/HC/Rebajas",
