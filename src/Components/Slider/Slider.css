@@ -9,9 +9,7 @@
 
 .container_main {
     width: 100%;
-    background: rgb(213, 160, 33);
-    background: linear-gradient(180deg, rgba(213, 160, 33, 1) 0%, rgba(213, 160, 33, 1) 33%, rgba(0, 0, 0, 0) 100%);
-
+    background-image: linear-gradient(#D5A021, rgb(0, 0, 0));
 }
 
 .slider-container {

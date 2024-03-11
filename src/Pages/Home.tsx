@@ -25,19 +25,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="HomeCardProductContainer">
-                <div className="text_container">
-                    <h2>Productos destacados</h2>
-                    <h4>que te encantaran</h4>
-                </div>
-
-                <div className="card_container">
-                    <CardProduct product={jsonData} />
-                    <CardProduct product={jsonData} />
-                    <CardProduct product={jsonData} />
-        
-                </div>
-            </div>
+            
 
 
 
