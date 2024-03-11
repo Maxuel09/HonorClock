@@ -1,11 +1,15 @@
 
 import "../Css/Home.css";
-const Home = () => {
+import Slider from "../Components/Slider/Slider";
 
-        <section className="HomeContainer">
-            <div className="Home">Estas en el Home</div>
-        </section>
-    
+
+const Home = () => {
+    return (
+        <>
+            <Slider />
+            
+        </>
+    )
 }
 
 export default Home

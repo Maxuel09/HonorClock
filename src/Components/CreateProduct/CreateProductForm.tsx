@@ -5,7 +5,7 @@ import { FloatingLabel } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import ModalCss from './ModalCss.css';
+
 
 export const CreateProductForm = () => {
 
