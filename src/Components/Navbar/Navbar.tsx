@@ -17,13 +17,13 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                     <Form.Select aria-label="Default select example">
-                    <option>Categorias</option>
-                    
-                <option value="1"><Link className="nav-link text-white" to="/HC/Categorias">Inteligentes</Link></option>
-                <option value="2"><Link className="nav-link text-white" to="/HC/Categorias">Anaalogicos</Link></option>
-                <option value="3"><Link className="nav-link text-white" to="/HC/Categorias">Digitales</Link></option>
-              
-                </Form.Select>
+                        <option>Categorias</option>
+
+                        <option value="1"><Link className="nav-link text-white" to="/HC/Categorias">Inteligentes</Link></option>
+                        <option value="2"><Link className="nav-link text-white" to="/HC/Categorias">Anaalogicos</Link></option>
+                        <option value="3"><Link className="nav-link text-white" to="/HC/Categorias">Digitales</Link></option>
+
+                    </Form.Select>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link text-white" to="/HC/SignIn">
