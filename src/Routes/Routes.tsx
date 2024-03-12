@@ -5,6 +5,7 @@ import Rebajas from "../Pages/Rebajas";
 import Root from "../Routes/Root";
 import SignIn from "../Pages/SignIn";
 import Categories from "../Pages/Categories";
+import User from "../Pages/User";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -30,10 +31,14 @@ const router = createBrowserRouter([
             {
                 path: "/HC/SignIn",
                 element: <SignIn />
-            }
+            },
+            {
+                path: "/HC/User",
+                element: <User />
+            },
         ]
-
     },
+        
 ]);
 
 export default router

@@ -1,0 +1,11 @@
+.UserProfile{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 80vh; 
+
+}
+.UserProfile {
+    color: rgb(255, 254, 254);
+    text-align: center; 
+}
