@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
+import categorias from "../Assets/Img/categorias.png";
 
 const Categories = () => {
   return (
     <>
-    <h1 className="text-white">CATEGORÍAS</h1>
-    <Form.Select className="text-white" aria-label="Default select example" style={{ color: "#D5A021" }}>
-  
-        <option value="1"><Link className="nav-link text-white" to="/HC/Categorias">Inteligentes</Link></option>
-        <option value="2"><Link className="nav-link text-white" to="/HC/Categorias">Analogicos</Link></option>
-        <option value="3"><Link className="nav-link text-white" to="/HC/Categorias">Digitales</Link></option>
+            <img src={categorias} alt="Categorías" style={{ width: "100%", maxWidth: "500px" }} />
+            <Form.Select aria-label="Default select example" style={{ backgroundColor: "#D5A021", color: "white" }}>
+                <option value="1" style={{ color: "white" }}>
+                    <Link className="nav-link text-white" to="/HC/Categorias">Inteligentes</Link>
+                </option>
+                <option value="2" style={{ color: "white" }}>
+                    <Link className="nav-link text-white" to="/HC/Categorias">Analógicos</Link>
+                </option>
+                <option value="3" style={{ color: "white" }}>
+                    <Link className="nav-link text-white" to="/HC/Categorias">Digitales</Link>
+                </option>
   </Form.Select>
   </>
   );
