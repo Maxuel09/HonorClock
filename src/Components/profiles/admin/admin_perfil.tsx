@@ -5,6 +5,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import * as formik from 'formik';
 import * as yup from 'yup';
+import './components/profiles/admin/admin_perfil.css'
 
 function FormExample() {
   const { Formik } = formik;

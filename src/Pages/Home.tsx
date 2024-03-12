@@ -1,9 +1,13 @@
 import "../Css/Home.css";
+import Slider from "../Components/Slider/Slider";
+
+
 const Home = () => {
     return (
-        <section className="HomeContainer">
-            <div className="Home">Estas en el Home</div>
-        </section>
+        <>
+            <Slider />
+            
+        </>
     )
 }
 
