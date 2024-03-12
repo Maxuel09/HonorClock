@@ -1,4 +1,4 @@
-export const productsList = async (url: string) =>{
+export const UserList = async (url: string) =>{
     if(url === '') return null
   
     try {
@@ -7,7 +7,7 @@ export const productsList = async (url: string) =>{
   
       return products
     } catch (error: any) {
-      throw new Error('Error carga Productos: ' + error.message)
+      throw new Error('Error carga usuarios: ' + error.message)
     }
   
   }
