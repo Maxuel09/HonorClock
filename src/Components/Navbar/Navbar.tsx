@@ -1,6 +1,9 @@
 
 import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
+import Categories from "../../Pages/Categories"
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 const Navbar = () => {
     return (
@@ -16,14 +19,20 @@ const Navbar = () => {
                     <Link className="nav-link text-white" to="/HC/Relojes">Relojes</Link>
                 </li>
                 <li className="nav-item">
-                    <Form.Select aria-label="Default select example">
+                    {/* <Form.Select aria-label="Default select example">
                     <option>Categorias</option>
                     
                 <option value="1"><Link className="nav-link text-white" to="/HC/Categorias">Inteligentes</Link></option>
-                <option value="2"><Link className="nav-link text-white" to="/HC/Categorias">Anaalogicos</Link></option>
+                <option value="2"><Link className="nav-link text-white" to="/HC/Categorias">Analogicos</Link></option>
                 <option value="3"><Link className="nav-link text-white" to="/HC/Categorias">Digitales</Link></option>
               
-                </Form.Select>
+                </Form.Select> */}
+                <NavDropdown  title="Categorías" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/HC/Categorias">Inteligentes</NavDropdown.Item>
+              <NavDropdown.Item href="/HC/Categorias">Analógicos</NavDropdown.Item>
+              <NavDropdown.Item href="/HC/Categorias">Digitales</NavDropdown.Item>
+              </NavDropdown>
+
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link text-white" to="/HC/SignIn">

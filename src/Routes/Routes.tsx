@@ -19,10 +19,7 @@ const router = createBrowserRouter([
                 path: "/HC/Relojes",
                 element: <Relojes />
             },
-            {
-                path: "/HC/Categorias",
-                element: <Categories />
-            },
+
             {
                 path: "/HC/Rebajas",
                 element: <Rebajas />
@@ -34,6 +31,10 @@ const router = createBrowserRouter([
         ]
 
     },
+    {
+        path: "/HC/Categorias",
+        element: <Categories />
+    }
 ]);
 
 export default router
