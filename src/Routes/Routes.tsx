@@ -28,14 +28,15 @@ const router = createBrowserRouter([
             {
                 path: "/HC/SignIn",
                 element: <SignIn />
+            },
+            {
+                path: "/HC/Categorias",
+                element: <Categories />
             }
         ]
 
     },
-    {
-        path: "/HC/Categorias",
-        element: <Categories />
-    }
+
 ]);
 
 export default router

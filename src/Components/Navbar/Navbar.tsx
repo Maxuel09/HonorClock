@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Dropdown, Button, ButtonGroup} from 'react-bootstrap';
 
 const CustomNavbar = () => {
     return (
@@ -11,11 +11,18 @@ const CustomNavbar = () => {
                 <Nav className="ms-auto">
                     <Nav.Link as={Link} to="/HC/Rebajas">Ofertas</Nav.Link>
                     <Nav.Link as={Link} to="/HC/Relojes">Relojes</Nav.Link>
-                    <NavDropdown title="Categorias" id="basic-nav-dropdown">
-                        <NavDropdown.Item as={Link} to="/HC/Categorias/Inteligentes">Inteligentes</NavDropdown.Item>
-                        <NavDropdown.Item as={Link} to="/HC/Categorias/Analogicos">Analógicos</NavDropdown.Item>
-                        <NavDropdown.Item as={Link} to="/HC/Categorias/Digitales">Digitales</NavDropdown.Item>
-                    </NavDropdown>
+                    <Nav.Link as={Link} to="/HC/Categorias">
+                        <Dropdown as={ButtonGroup}>
+                        <Button variant="link" style={{ color: 'gray', textDecoration: 'none' }}>Categorías</Button>
+                            <Dropdown.Toggle style={{ backgroundColor: 'transparent', border: 'none' }} split variant="success" id="dropdown-split-basic" />
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Inteligentes</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Analógicos</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Digitales</Dropdown.Item>
+                                </Dropdown.Menu>
+                        </Dropdown>
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/HC/Contacto">Contacto</Nav.Link>
                 </Nav>
                 <Nav>
                     <Nav.Link as={Link} to="/HC/SignIn">
