@@ -11,17 +11,7 @@ const CustomNavbar = () => {
                 <Nav className="ms-auto">
                     <Nav.Link as={Link} to="/HC/Rebajas">Ofertas</Nav.Link>
                     <Nav.Link as={Link} to="/HC/Relojes">Relojes</Nav.Link>
-                    <Nav.Link as={Link} to="/HC/Categorias">
-                        <Dropdown as={ButtonGroup}>
-                        <Button variant="link" style={{ color: 'gray', textDecoration: 'none' }}>Categorías</Button>
-                            <Dropdown.Toggle style={{ backgroundColor: 'transparent', border: 'none' }} split variant="success" id="dropdown-split-basic" />
-                                <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1">Inteligentes</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Analógicos</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Digitales</Dropdown.Item>
-                                </Dropdown.Menu>
-                        </Dropdown>
-                    </Nav.Link>
+                    <Nav.Link as={Link} to="/HC/Categorias">Categorías</Nav.Link>
                     <Nav.Link as={Link} to="/HC/Contacto">Contacto</Nav.Link>
                 </Nav>
                 <Nav>
