@@ -28,14 +28,16 @@ const router = createBrowserRouter([
             {
                 path: "/HC/AuthForm",
                 element: <AuthForm />
+              
+            },
+            {
+                path: "/HC/Categorias",
+                element: <Categories />
             }
         ]
 
     },
-    {
-        path: "/HC/Categorias",
-        element: <Categories />
-    }
+
 ]);
 
 export default router
