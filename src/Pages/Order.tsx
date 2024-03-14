@@ -9,8 +9,7 @@ const Order = () => {
                 <hr />
             </div>
             <div className="m-0">
-                <OrderList />
-                <OrderList />
+
                 
             </div>
             
