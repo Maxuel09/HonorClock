@@ -1,3 +1,15 @@
-body{
+body {
   background-color: black;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+}
+
+
+body:focus {
+  overflow-y: auto;
+}
+
+
+::-webkit-scrollbar {
+  display: none; 
 }
