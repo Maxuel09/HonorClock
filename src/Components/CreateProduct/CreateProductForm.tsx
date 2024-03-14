@@ -34,13 +34,13 @@ export const CreateProductForm = () => {
 
                         <Form.Control type="text" placeholder="Nombre" className="mb-3" />
 
-                        <FloatingLabel controlId="floatingSelect" label="Categorias" className="mb-3">
-                            <Form.Select aria-label="Floating label select example">
+                        
+                            <Form.Select aria-label="Floating label select example" className="mb-3">
                                 <option value="1">Analógicos</option>
                                 <option value="2">Digitales</option>
                                 <option value="3">Inteligentes</option>
                             </Form.Select>
-                        </FloatingLabel>
+                        
                         <Row>
                             <Col>
                                 <Form.Control placeholder="Stock" type="number" />
