@@ -2,10 +2,11 @@
 
 const UserProducts = () => {
   return (
-    <div>
-        UserProducts
+    <section className="UserProducts">
+            <div className="user_products">Mis productos
+            </div>
+        </section>
 
-    </div>
   )
 }
 
