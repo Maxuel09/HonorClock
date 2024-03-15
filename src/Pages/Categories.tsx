@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import { useState, useEffect } from 'react';
 import CardProduct from "../Components/CardProduct/CardProduct";
@@ -47,7 +47,7 @@ const Categories = () => {
   return (
     <section className='container_categories'>
        <div className="column justify-content-center">
-          <div className="col-12 col-md-12 text-center "><img src={categorias} alt="Categorías" style={{ width: "100%", maxWidth: "500px", marginBottom: "3em", marginTop: "3em"}} />
+          <div className="col-12 col-md-12 text-center "><img src={categorias} alt="Categorías" style={{ width: "100%", maxWidth: "500px", marginBottom: "2.5em", marginTop: "3em"}} />
           </div>
            
           <div className="col-8 col-md-2 mx-auto text-center" style={{ marginBottom: "120px" }}>
