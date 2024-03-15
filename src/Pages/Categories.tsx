@@ -27,7 +27,7 @@ const Categories = () => {
                   const data = await response.json();
                   setProducts(data);
               } catch (error) {
-                  console.error('Hubo un error al cargar los productos:', error);
+                  console.error('There was an error loading the products:', error);
               }
           };
   
@@ -50,7 +50,7 @@ const Categories = () => {
           <div className="col-12 col-md-12 text-center "><img src={categorias} alt="Categorías" style={{ width: "100%", maxWidth: "500px", marginBottom: "3em", marginTop: "3em"}} />
           </div>
            
-          <div className="col-8 col-md-2 mx-auto text-center">
+          <div className="col-8 col-md-2 mx-auto text-center" style={{ marginBottom: "120px" }}>
             <Form.Select aria-label="Default select example" onChange={handleCategoryChange} style={{ backgroundColor: "#D5A021", color: "white", fontSize: "20px", fontFamily: "Montserrat, sans-serif" }}>
               
               <option value="Todos">Todos</option>
@@ -63,8 +63,10 @@ const Categories = () => {
           <div className="row justify-content-center">
           {/* Renderizar los productos filtrados */}
           {filteredProducts.map((product, index) => (
-              <div key={index} className="col-6 col-md-4 mb-4">
+              <div key={index} className="col-12 col-md-3 mb-4" >
+                <div className="d-flex justify-content-center">
                     <CardProduct product={product} />
+                </div>
               </div>
           ))}
 
