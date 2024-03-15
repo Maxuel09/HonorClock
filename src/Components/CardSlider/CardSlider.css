@@ -1,4 +1,4 @@
-.card {
+.card_slider{
     background: none;
     border: none;
     position: relative;
@@ -9,11 +9,11 @@
     overflow: hidden;
 }
 
-.card:active {
+.card_slider:active {
     transform: scale(.95);
 }
 
-.card::before {
+.card_slider::before {
     content: "";
     position: absolute;
     top: 0;
@@ -23,7 +23,7 @@
     z-index: 1;
 }
 
-.card::after {
+.card_slider::after {
     content: "79.00";
     position: absolute;
     bottom: -50%;
@@ -39,16 +39,16 @@
     transition: all .2s ease-in;
 }
 
-.card:hover::after {
+.card_slider:hover::after {
     bottom: 0;
 }
 
-.card:active::after {
+.card_slider:active::after {
     content: "Adding !";
     height: 65px;
 }
 
-.card:hover .card-img {
+.card_slider:hover .card-img {
     width: 220px;
     height: auto;
     animation: none;

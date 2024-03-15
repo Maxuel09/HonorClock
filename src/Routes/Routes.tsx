@@ -5,7 +5,7 @@ import Rebajas from "../Pages/Rebajas";
 import Root from "../Routes/Root";
 import SignIn from "../Pages/SignIn";
 import Categories from "../Pages/Categories";
-import User from "../Pages/User";
+import Admin from "../Pages/Admin";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -33,8 +33,8 @@ const router = createBrowserRouter([
                 element: <SignIn />
             },
             {
-                path: "/HC/User",
-                element: <User />
+                path: "/HC/Admin",
+                element: <Admin />
             },
         ]
     },

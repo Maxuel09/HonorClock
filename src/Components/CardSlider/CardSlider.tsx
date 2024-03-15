@@ -9,7 +9,7 @@ interface CardSliderProps {
 
 const CardSlider: React.FC<CardSliderProps> = ({ title, content, imageUrl }) => {
     return (
-        <div className='card'>
+        <div className='card_slider'>
             <img className='card-img' src={imageUrl} alt={title} />
             <div className="card-content">
                 <h2>{title}</h2>
