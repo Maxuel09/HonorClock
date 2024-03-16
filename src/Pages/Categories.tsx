@@ -51,7 +51,7 @@ const Categories = () => {
           </div>
            
           <div className="col-8 col-md-2 mx-auto text-center" style={{ marginBottom: "120px" }}>
-            <Form.Select aria-label="Default select example" onChange={handleCategoryChange} style={{ backgroundColor: "#D5A021", color: "white", fontSize: "20px", fontFamily: "Montserrat, sans-serif" }}>
+            <Form.Select aria-label="Default select example" onChange={handleCategoryChange} style={{ backgroundColor: "#997318", color: "white", fontSize: "20px", fontFamily: "Montserrat, sans-serif" }}>
               
               <option value="Todos">Todos</option>
                         <option value="Inteligente">Inteligentes</option>
