@@ -3,7 +3,7 @@ import Home from "../Pages/Home";
 import Relojes from "../Pages/Relojes";
 import Rebajas from "../Pages/Rebajas";
 import Root from "../Routes/Root";
-import SignIn from "../Pages/SignIn";
+import AuthForm from "../Pages/AuthForm";
 import Categories from "../Pages/Categories";
 const router = createBrowserRouter([
     {
@@ -26,8 +26,9 @@ const router = createBrowserRouter([
                 element: <Rebajas />
             },
             {
-                path: "/HC/SignIn",
-                element: <SignIn />
+                path: "/HC/AuthForm",
+                element: <AuthForm />
+              
             },
             {
                 path: "/HC/Categorias",
