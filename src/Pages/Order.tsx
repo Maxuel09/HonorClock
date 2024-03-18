@@ -1,7 +1,22 @@
 
 import OrderList from '../Components/OrderList/OrderList';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 const Order = () => {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const data = await ProductService.getProducts();
+                setProducts(data);
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        };
+
+        fetchProducts();
+    }, []);
     return (
         <div className="mt-5 d-flex flex-column">
             <div className='bg-light'>
@@ -9,7 +24,9 @@ const Order = () => {
                 <hr />
             </div>
             <div className="m-0">
-
+            {products.map((product, index) => (
+                        <CardProduct product={product} key={index} />
+                    ))}
                 
             </div>
             

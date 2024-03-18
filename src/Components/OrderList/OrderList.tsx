@@ -14,6 +14,7 @@ const OrderList = ({ product }: { product: ProductType }) => {
             <ListGroup.Item className='border'>
                 <div className='d-flex justify-content-between m-4'>
                     <div><img src={product.image} alt={product.name} className="image-icon" /></div>
+                    <div>{product.name}</div>
                     <div className=''> <Form.Control className='w-25' placeholder="unidades" type="number" /></div>
                     <div>Eliminar</div>
                     <div>{product.price}</div>
