@@ -3,8 +3,11 @@ import Home from "../Pages/Home";
 import Relojes from "../Pages/Relojes";
 import Rebajas from "../Pages/Rebajas";
 import Root from "../Routes/Root";
-import AuthForm from "../Pages/AuthForm";
 import Categories from "../Pages/Categories";
+
+
+
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -25,17 +28,16 @@ const router = createBrowserRouter([
                 path: "/HC/Rebajas",
                 element: <Rebajas />
             },
-            {
-                path: "/HC/AuthForm",
-                element: <AuthForm />
-            }
-        ]
 
+
+        ]
     },
+    
     {
         path: "/HC/Categorias",
         element: <Categories />
-    }
+    },
+
 ]);
 
 export default router

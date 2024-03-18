@@ -22,6 +22,8 @@ const CustomNavbar = () => {
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to="/HC/Rebajas">Ofertas</Nav.Link>
                         <Nav.Link as={Link} to="/HC/Relojes">Relojes</Nav.Link>
+                        <Nav.Link as={Link} to="/HC/Login">login</Nav.Link>
+                        <Nav.Link as={Link} to="/HC/Register">Register</Nav.Link>
                         <NavDropdown title="Categorias" id="basic-nav-dropdown">
                             <NavDropdown.Item as={Link} to="/HC/Categorias/Inteligentes">Inteligentes</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/HC/Categorias/Analogicos">Analógicos</NavDropdown.Item>
