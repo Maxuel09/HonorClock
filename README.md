@@ -24,17 +24,19 @@ HonnorClock !! La misión de este proyecto de comercio electrónico dedicado a l
 - Git
 - Json Server
 - Bootstrap
-  ## Backend
+# Backend
 - Mongo
-  # Para la base datos DOCKER
+# BBDD
 - MongoDB
-  ## Metodologia de trabajo
-  - Pair programing
+# Metodología de trabajo
+- Pair programing
+- Jira - Software
     
 ## Herramientas
 - Visual Studio Code
 - GIT
 - Github
+- Cloudinary
   
 ## Miembros
 
@@ -45,16 +47,20 @@ HonnorClock !! La misión de este proyecto de comercio electrónico dedicado a l
 - [Anzuly Garcia](https://github.com/yluzna)
 - [Raúl Vara](https://github.com/RvaraG)
   
-  ## Project Setup
+  ## Configuración Inicial
+  ### Clonar Repositorios
+Front
+```sh
+https://github.com/Maxuel09/HonorClock-Front.git
+```
+Back
+```sh
+https://github.com/Maxuel09/HonorClock-Back.git
+```
+### Instalar Dependencias 
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
 ```
 ### Compile and call Api
 
