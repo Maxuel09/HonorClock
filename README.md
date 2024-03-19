@@ -1,30 +1,71 @@
-# React + TypeScript + Vite
+# HonnorClock !!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Proyecto propuesto
 
-Currently, two official plugins are available:
+¡Bienvenida a HonnorClock, este proyecto es una aplicación de comercio electrónico para la venta de relojes!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción del Proyecto
 
-## Expanding the ESLint configuration
+HonnorClock !! La misión de este proyecto de comercio electrónico dedicado a la compra y venta de relojes es proporcionar a nuestros clientes una experiencia excepcional al ingresar a la web, que puedan apreciar la alta calidad de nuestros servicios. Nos esforzamos por ofrecer una amplia selección de relojes elegantes y funcionales, desde relojes clásicos hasta modelos modernos y deportivos.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Funcionalidades
+- Página con el listado de anuncios
+- Página con el detalle de un anuncio
+- Publicación de anuncios
+  ## Extra
+- Login en local-host
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias utilizadas y gestión de dependencias  
+- HTML
+- CSS
+- JavaScript
+- React dom
+- TypeScript
+- Git
+- Json Server
+- Bootstrap
+  ## Backend
+- Mongo
+  # Para la base datos DOCKER
+- MongoDB
+  ## Metodologia de trabajo
+  - Pair programing
+    
+## Herramientas
+- Visual Studio Code
+- GIT
+- Github
+  
+## Miembros
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- [Maxuel Murillo](https://github.com/Maxuel09)
+- [David Argente](https://github.com/Davvidar)
+- [Alicia Redondo](https://github.com/Aliciared7)
+- [Victor Correa](https://github.com/VICTOR-M8)
+- [Anzuly Garcia](https://github.com/yluzna)
+- [Raúl Vara](https://github.com/RvaraG)
+  
+  ## Project Setup
+
+```sh
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+### Compile and call Api
+
+```sh
+npm run api
+
+### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+npm run test:unit
+```
+
+ # ¡Contribuciones y sugerencias son bienvenidas!
+
