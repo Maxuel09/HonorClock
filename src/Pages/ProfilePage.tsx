@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CardProduct from '../Components/CardProduct/CardProduct';
 import Navbar from '../Components/Navbar/Navbar';
 import {  Button } from 'react-bootstrap';
-
+import '../Css/Profilepage.css';
 interface ProductType {
     name: string;
     description: string;
@@ -57,20 +57,20 @@ const ProfilePage = () => {
         <div className="container">
             {/* <Navbar isLoggedIn={true} /> aquí quiero que traiga un icono de estar logado para deslogarse, pero no se como hacerlo */}
             <div className="row align-items-center">
-                <div className="col-md-8">
-                    <h1>{userData && userData.name}</h1>
+                <div className=" col-sm-8">
+                    <h1> {userData && userData.name}</h1>
                 </div>
-                <div className="col-md-4 d-flex justify-content-end">
+                <div className="col-sm-4 d-flex justify-content-end">
 
                 {/* <Button variant="primary" onClick={handleOpenModal}> lo quito porque tengo que llamar al modal de añadir producto */}
-                    <Button>
+                    <Button className="Button" variant="secondary" onClick={handleOpenModal}>
                         Añadir Producto
                     </Button>
                 </div>
             </div>
-            <section>
-                <h2>Productos en Venta</h2>
-                <div className="row">
+            <section className="my-5">
+                <h2>Productos en Venta:</h2>
+                <div className="row align-items-center">
                     {userData && userData.productsForSale && userData.productsForSale.length > 0 ? (
                         userData.productsForSale.map(product => (
                             <div key={product.name} className="col-12 col-md-3 mb-4">
@@ -84,7 +84,7 @@ const ProfilePage = () => {
             </section>
 
             <section>
-                <h2>Productos Vendidos</h2>
+                <h2>Productos Vendidos:</h2>
                 <div className="row">
                     {userData && userData.soldProducts && userData.soldProducts.length > 0 ? (
                         userData.soldProducts.map(product => (
