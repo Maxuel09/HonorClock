@@ -12,5 +12,6 @@ export const ProductService = {
             throw error;
         }
     },
+    
 };
 
