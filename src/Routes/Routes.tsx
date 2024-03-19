@@ -5,6 +5,8 @@ import Rebajas from "../Pages/Rebajas";
 import Root from "../Routes/Root";
 import AuthForm from "../Pages/AuthForm";
 import Categories from "../Pages/Categories";
+import UserProfilePage from "../Pages/UserProfilePage";
+import ProfilePage from "../Pages/ProfilePage";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -33,7 +35,12 @@ const router = createBrowserRouter([
             {
                 path: "/HC/Categorias",
                 element: <Categories />
+            },
+            {
+                path: "/HC/Perfil",
+                element: <ProfilePage />
             }
+
         ]
 
     },
