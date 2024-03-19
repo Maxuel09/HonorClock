@@ -7,12 +7,12 @@ const CARDS = 9;
 const MAX_VISIBILITY = 2;
 
 const Slider = () => {
-    const [active, setActive] = useState(0); 
+    const [active, setActive] = useState(0);
     const handlePrev = () => {
-        setActive((prev) => (prev === 0 ? CARDS - 1 : prev - 1)); 
+        setActive((prev) => (prev === 0 ? CARDS - 1 : prev - 1));
     };
     const handleNext = () => {
-        setActive((prev) => (prev === CARDS - 1 ? 0 : prev + 1)); 
+        setActive((prev) => (prev === CARDS - 1 ? 0 : prev + 1));
     };
 
     return (

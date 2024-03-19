@@ -9,6 +9,7 @@ interface User {
 
 const API_URL = 'https://honorclock.up.railway.app/HC/register';
 
+
 const registerUser = async (user: User) => {
     try {
         const response = await fetch(`${API_URL}`, {
