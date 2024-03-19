@@ -106,9 +106,9 @@ export const CreateProductForm = () => {
                             name="category"
                             onChange={handleChange}
                             className="mb-3">
-                            <option value="1">Analógicos</option>
-                            <option value="2">Digitales</option>
-                            <option value="3">Inteligentes</option>
+                            <option value="Analógicos">Analógicos</option>
+                            <option value="Digitales">Digitales</option>
+                            <option value="Inteligentes">Inteligentes</option>
                         </Form.Select>
 
                         <Row>
