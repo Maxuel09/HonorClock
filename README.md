@@ -51,11 +51,11 @@ HonnorClock !! La misión de este proyecto de comercio electrónico dedicado a l
   ### Clonar Repositorios
 Front
 ```sh
-https://github.com/Maxuel09/HonorClock-Front.git
+git clone https://github.com/Maxuel09/HonorClock-Front.git
 ```
 Back
 ```sh
-https://github.com/Maxuel09/HonorClock-Back.git
+git clone https://github.com/Maxuel09/HonorClock-Back.git
 ```
 ### Instalar Dependencias 
 
