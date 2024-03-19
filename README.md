@@ -1,6 +1,7 @@
-# HonnorClock !!
+![image](https://github.com/Maxuel09/HonorClock-Front/assets/148530687/3aa11cc0-3973-4dc3-9ba7-732d94336f51)
+# HonnorClock 
 
-## Proyecto propuesto
+## Proyecto propuesto 
 
 ¡Bienvenida a HonnorClock, este proyecto es una aplicación de comercio electrónico para la venta de relojes!
 
@@ -58,10 +59,15 @@ Back
 git clone https://github.com/Maxuel09/HonorClock-Back.git
 ```
 ### Instalar Dependencias 
-
 ```sh
 npm install
 ```
+### Iniciar Aplicación
+```sh
+npm run dev
+```
+
+
 ### Compile and call Api
 
 ```sh
