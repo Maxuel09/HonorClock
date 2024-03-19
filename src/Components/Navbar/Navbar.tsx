@@ -23,6 +23,7 @@ const CustomNavbar = () => {
                         <Nav.Link as={Link} to="/HC/Rebajas">Ofertas</Nav.Link>
                         <Nav.Link as={Link} to="/HC/Relojes">Relojes</Nav.Link>
                         <Nav.Link as={Link} to="/HC/Categorias">Categorías</Nav.Link>
+                        <Nav.Link as={Link} to="/HC/Producto">Producto</Nav.Link>
                     </Nav>
                     <Nav>
                         
