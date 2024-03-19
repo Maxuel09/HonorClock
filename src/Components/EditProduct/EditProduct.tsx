@@ -20,9 +20,9 @@ const EditProduct = (id:string) => {
     const [stock, setStock] = useState(productById.stock);
     const [category, setCategory] = useState(productById.category);
     
-    /* const [image, setImage] = useState(productById.image); */
+    /* const [image, setImage] = useState(productById.image); 
   
- /*    const handleImageChange = (event:any) => {
+     const handleImageChange = (event:any) => {
       const file = event.target.files[0];
       const reader = new FileReader();
       reader.readAsDataURL(file);
