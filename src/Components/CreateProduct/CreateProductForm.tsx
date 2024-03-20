@@ -72,7 +72,7 @@ export const CreateProductForm = () => {
 
     return (
         <div>
-            <Button variant="primary"
+            <Button className="btn-custom"
                 onClick={handleShow}>
                 Añadir producto
             </Button>
@@ -168,6 +168,6 @@ export const CreateProductForm = () => {
 
 
                 </Modal.Footer>
-            </Modal></div>
-    )
+            </Modal></div>)
+    
 }

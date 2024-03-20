@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import AuthForm from '../../Pages/AuthForm';
 import './Navbar.css';
@@ -14,16 +14,16 @@ const CustomNavbar = () => {
 
 
     return (
-        <div style={{ margin: '0 20px' }}>
+        <div className="fixed-top" style={{ margin: '0 0px' }}>
             <Navbar bg="black" expand="lg" variant="dark">
                 <Navbar.Brand as={Link} to="/HC/Home">Inicio</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link as={Link} to="/HC/Rebajas">Ofertas</Nav.Link>
-                        <Nav.Link as={Link} to="/HC/Relojes">Relojes</Nav.Link>
+                        <Nav.Link as={Link} to="/HC/Rebajas">Destacados</Nav.Link>
+                        <Nav.Link as={Link} to="/HC/Relojes">Contacto</Nav.Link>
                         <Nav.Link as={Link} to="/HC/Categorias">Categorías</Nav.Link>
-                        <Nav.Link as={Link} to="/HC/Producto">Producto</Nav.Link>
+                        <Nav.Link as={Link} to="/HC/Perfil">Perfil</Nav.Link>
                     </Nav>
                     <Nav>
                         

@@ -1,49 +1,8 @@
 .footer {
     background-color: black;
     color: white;
-    padding: 20px 0;
+    padding: 6px 30px;
     
-
-}
-
-.contact-form {
-    width: 50%;
-    display: flex;
-    
-
-    flex-direction: column;
-}
-
-.contact-form div {
-
-    margin-bottom: 10px;
-}
-
-.contact-form label {
-    color: white;
-    margin-bottom: 5px;
-}
-
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #D5A021;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #A49694;
 }
 
 .form-group {

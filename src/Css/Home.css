@@ -1,3 +1,4 @@
+
 .HomeCardProductContainer {
     display: flex;
     flex-direction: column;
@@ -10,9 +11,22 @@
 
 }
 
+.HomeCardProductContainer h2 {
+    font-size: 55px;
+    font-weight: 200;
+    letter-spacing: 4px;
+}
+
+.HomeCardProductContainer h4 {
+    font-family: 'Beau Rivage', sans-serif;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
 .text_container {
     text-align: center;
     color: white;
+    
 }
 
 .card_container {
