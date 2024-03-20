@@ -4,6 +4,7 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import AuthForm from '../../Pages/AuthForm';
 import './Navbar.css';
+import logo from '../../Assets/Img/Group.svg';
 
 
 const CustomNavbar = () => {
@@ -16,7 +17,7 @@ const CustomNavbar = () => {
     return (
         <div className="fixed-top" style={{ margin: '0 0px' }}>
             <Navbar bg="black" expand="lg" variant="dark">
-                <Navbar.Brand as={Link} to="/HC/Home">Inicio</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/HC/Home"> <img src={logo} alt="Logo" className="navbar-logo" style={{ width: '300px', height: 'auto', marginLeft: '20px' }} /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">

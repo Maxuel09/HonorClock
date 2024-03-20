@@ -4,7 +4,7 @@ import Slider from "../Components/Slider/Slider";
 import CardProduct from "../Components/CardProduct/CardProduct";
 import { ProductService } from "../service/CardProduct";
 import ContactForm from "../Components/Contact/ContactForm";
-
+import '../../src/Components/Navbar/Navbar.css'
 import { Link } from 'react-router-dom';
 
 interface Product {
@@ -34,7 +34,9 @@ console.log(products)
 
     return (
         <main className="HomeContainer">
+            <div className="container_main ">
             <Slider />
+            </div>
 
             <div className="HomeCardProductContainer">
                 <div className="text_container">
