@@ -45,7 +45,7 @@ const Categories = () => {
           : products.filter(product => product.category === selectedCategory);
 
   return (
-    <section className='container_categories'>
+    <section className='container_categories mt-5'>
        <div className="column justify-content-center">
           <div className="col-12 col-md-12 text-center "><img src={categorias} alt="Categorías" style={{ width: "100%", maxWidth: "500px", marginBottom: "2.5em", marginTop: "3em"}} />
           </div>

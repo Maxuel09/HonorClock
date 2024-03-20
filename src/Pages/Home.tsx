@@ -3,6 +3,8 @@ import "../Css/Home.css";
 import Slider from "../Components/Slider/Slider";
 import CardProduct from "../Components/CardProduct/CardProduct";
 import { ProductService } from "../service/CardProduct";
+import ContactForm from "../Components/Contact/ContactForm";
+
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -27,7 +29,7 @@ const Home = () => {
             <div className="HomeCardProductContainer">
                 <div className="text_container">
                     <h2>Productos destacados</h2>
-                    <h4>que te encantarán</h4>
+                    <h4>¡que te encantarán!</h4>
                 </div>
 
                 <div className="card_container">
@@ -35,6 +37,10 @@ const Home = () => {
                         <CardProduct product={product} key={index} />
                     ))}
                 </div>
+            </div>
+            
+            <div className="w-100">
+                <ContactForm/>
             </div>
         </main>
     );

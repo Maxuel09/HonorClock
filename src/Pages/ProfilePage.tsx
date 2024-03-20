@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import CardProduct from '../Components/CardProduct/CardProduct';
-import Navbar from '../Components/Navbar/Navbar';
-import {  Button } from 'react-bootstrap';
 import '../Css/Profilepage.css';
+import {CreateProductForm}  from "../Components/CreateProduct/CreateProductForm";
+
 interface ProductType {
     name: string;
     description: string;
     price: number;
+    stock: number;
+    category: string;
     image: string;
 }
 
 interface UserData {
     name: string;
+    email:string;
     productsForSale: ProductType[];
     soldProducts: ProductType[];
 }
@@ -21,10 +24,10 @@ const ProfilePage = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
-    const [showModal, setShowModal] = useState(false);
+    // const [showModal, setShowModal] = useState(false);
 
-    const handleOpenModal = () => {setShowModal(true)};
-    const handleCloseModal = () => {setShowModal(false)};
+    // const handleOpenModal = () => {setShowModal(true)};
+    // const handleCloseModal = () => {setShowModal(false)};
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -54,22 +57,35 @@ const ProfilePage = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container w-100 mt-5 pt-5">
             {/* <Navbar isLoggedIn={true} /> aquí quiero que traiga un icono de estar logado para deslogarse, pero no se como hacerlo */}
-            <div className="row align-items-center">
-                <div className=" col-sm-8">
-                    <h1> {userData && userData.name}</h1>
-                </div>
-                <div className="col-sm-4 d-flex justify-content-end">
-
-                {/* <Button variant="primary" onClick={handleOpenModal}> lo quito porque tengo que llamar al modal de añadir producto */}
-                    <Button className="Button" variant="secondary" onClick={handleOpenModal}>
-                        Añadir Producto
-                    </Button>
-                </div>
+            <div className="row">
+ 
+    <div className="col-sm-6">
+        <div className="row">
+            <div className="col-sm-3">
+                <h4>Nombre:</h4>
             </div>
-            <section className="my-5">
-                <h2>Productos en Venta:</h2>
+            <div className="col-sm-9">
+                <h3>{userData && userData.name}</h3>
+            </div>
+            <div className="col-sm-3">
+                <h4>Email:</h4>
+            </div>
+            <div className="col-sm-9">
+                <h3>{userData && userData.email}</h3>
+            </div>
+        </div>
+    </div>
+
+    <div className="col-sm-6 d-flex justify-content-end">
+        <CreateProductForm/>
+    </div>
+</div>
+            
+
+            <section className="my-5 ">
+                <h2 className="text-center">Productos en Venta:</h2>
                 <div className="row align-items-center">
                     {userData && userData.productsForSale && userData.productsForSale.length > 0 ? (
                         userData.productsForSale.map(product => (
@@ -78,13 +94,13 @@ const ProfilePage = () => {
                             </div>
             ))
         ) : (
-                <p>No hay productos en venta.</p>
+                <p className="text-center">No hay productos en venta.</p>
         )}
                 </div>
             </section>
 
-            <section>
-                <h2>Productos Vendidos:</h2>
+            <section className="my-5">
+                <h2 className="text-center">Productos Vendidos:</h2>
                 <div className="row">
                     {userData && userData.soldProducts && userData.soldProducts.length > 0 ? (
                         userData.soldProducts.map(product => (
@@ -93,7 +109,7 @@ const ProfilePage = () => {
                             </div>
                 ))
         ) : (
-                <p>No hay productos vendidos.</p>
+                <p className="text-center">No hay productos vendidos.</p>
         )}      
                 </div>
             </section>

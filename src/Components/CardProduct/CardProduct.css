@@ -44,11 +44,10 @@
 
 .card-title {
     margin: 0;
-    font-size: 17px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-weight: 600;
-    color: #1797b8;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #f5f8f8;
     cursor: default;
     -webkit-box-orient: vertical;
     overflow: hidden;
