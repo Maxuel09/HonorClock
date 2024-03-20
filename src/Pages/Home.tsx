@@ -1,12 +1,22 @@
-import  { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Css/Home.css";
 import Slider from "../Components/Slider/Slider";
 import CardProduct from "../Components/CardProduct/CardProduct";
 import { ProductService } from "../service/CardProduct";
+import { Link } from 'react-router-dom';
+
+interface Product {
+    _id: string;
+    image: string;
+    name: string;
+    price: number;
+    stock: number;
+    description: string;
+}
 
 const Home = () => {
-    const [products, setProducts] = useState([]);
-
+    const [products, setProducts] = useState<Product[]>([]);
+console.log(products)
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -31,8 +41,10 @@ const Home = () => {
                 </div>
 
                 <div className="card_container">
-                    {products.map((product, index) => (
-                        <CardProduct product={product} key={index} />
+                    {products.map(product => (
+                        <Link to={`/HC/Productos/${product._id}`} key={product._id}>
+                            <CardProduct productCard={product} />
+                        </Link>
                     ))}
                 </div>
             </div>

@@ -1,78 +1,54 @@
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Image, Row, Col, Container, Card, Button } from 'react-bootstrap';
 import "../Css/Categories.css";
-import { Button } from 'react-bootstrap';
-import { useEffect, useState } from 'react';
-import { ProductService } from "../service/CardProduct";
-import CardProduct from "../Components/CardProduct/CardProduct";
+import { useParams } from "react-router-dom";
+import { ProductService } from "../service/CardProduct.js";
+import useProducts from "../Components/context/useProducts";
 
 
 
-const ProductDetail = () => {
-    const [products, setProducts] = useState([]);
-
+const ProductDetail: React.FC = () => {
+    console.log(useParams())
+    const { productById } = useParams()
+    console.log(productById)
+    const [product, setProduct] = useState([]);
+    const fetchProduct = async () => {
+        const product = await ProductService.getProductById(productById);
+        console.log(product)
+        setProduct(product);
+    }
     useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                const data = await ProductService.getProducts();
-                setProducts(data);
-            } catch (error) {
-                console.error("Error fetching products:", error);
-            }
-        };
-
-        fetchProducts();
-    }, []);
+        fetchProduct()
+    }, [])
     return (
         <div className="container_categories text-white">
-
-            <Container >
-                <Row className='pt-5 text-white'>
+            <Container className="d-flex justify-content-center space-between mp-5">
+                <Row className=' text-white m-5'>
                     <Col>
-                        <h2>imagen reloj  </h2>
-                        <img src="../smartwatch-komodo9.png" alt="" />
+                        <Image src={product.image} className='h-100 border border-warning ' rounded alt="" />
                     </Col>
-                    <Col>
-                        <h3>Nombre Reloj</h3>
-                    </Col>
-                    <Col>
-                        <h3 className='text-center' >300€</h3>
-                        <Button className='mt-5' variant="warning">Añadir al carrito</Button>
-                    </Col>
-                </Row>
+                    <Col className='d-flex flex-column'>
 
-                <Row className='mt-5 d-flex justify-content-center'>
-                    
-                        <Card className='bg-light w-75'>
-                            <Card.Header as="h5" className='text-center'>Descripción</Card.Header>
-                            <Card.Body>
-                                <Card.Text>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere esse, beatae odit eos, dignissimos aliquam omnis reprehenderit consequatur sapiente nam dolore suscipit aliquid dolorem earum est veritatis. Voluptas, molestiae quas!
-                                </Card.Text>
-
-                            </Card.Body>
-                        </Card>
-                    
-                </Row>
-                <Row className='mt-5'>
-                    <h3 className='text-center'>Productos relacionados</h3>
-                    <Col className='mt-5 d-flex justify-content-center flex-wrap'>
-                        <div className="card_container ">
-                            {products.map((product, index) => (
-                                <CardProduct product={product} key={index} />
-                            ))}
+                        <h3>{product.name}</h3>
+                        <hr />
+                        <Card.Text>{product.description}</Card.Text>
+                        <hr />
+                        <div className='d-flex justify-content-between text-end mt-3'>
+                            <h3 className=''>Precio:</h3>
+                            <h3 className=''>{product.price}€</h3>
                         </div>
+                        <hr />
+                      
+
+                        <Button className='mt-5 ' variant="warning">Añadir al carrito</Button>
+                        
                     </Col>
+
                 </Row>
 
             </Container>
-
-
-
         </div>
-    )
-}
+    );
+};
 
-export default ProductDetail
+export default ProductDetail;

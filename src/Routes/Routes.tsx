@@ -35,8 +35,9 @@ const router = createBrowserRouter([
                 path: "/HC/Categorias",
                 element: <Categories />
             },
+
             {
-                path: "/HC/Producto",
+                path: "/HC/Productos/:productById", 
                 element: <ProductDetail />
             }
         ]
