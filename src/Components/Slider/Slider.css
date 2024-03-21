@@ -1,0 +1,126 @@
+:root {
+    --color-purple: #8B5CF6;
+    --color-pink: #EC4899;
+    --color-gray: #9CA3AF;
+    --color-black: #1F2937;
+    --card-size: 35rem;
+}
+
+.container_main {
+    
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    
+    
+    background-image: linear-gradient(#D5A021, rgb(0, 0, 0));
+}
+
+.carousel {
+    
+    transform: translateX(0px);
+    animation: float 6s ease-out infinite;
+    position: relative;
+    width: var(--card-size);
+    height: var(--card-size);
+    perspective: 500px;
+    
+}
+
+
+
+
+
+.carousel .nav {
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+    background: unset;
+    border: unset;
+}
+
+
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-60px);
+
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+.carousel .nav.left {
+    transform: translateX(-100%) translateY(-50%);
+}
+
+.carousel .nav.right {
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        max-width: 300px;
+
+    }
+
+    .carousel .nav {
+        font-size: 8vw;
+    }
+}
+
+/* Slider.css */
+
+/* Estilos para el texto en el carrusel */
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white; 
+    padding: 20px; 
+}
+
+.carousel-caption h3 {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+}
+
+.carousel-caption p {
+    font-size: 1rem; 
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+    font-size: 4rem; 
+    color: white; 
+    background-color: transparent; 
+}
+
+.carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-color: white; 
+}
+
+.carousel-indicators .active {
+    background-color: white; 
+}
