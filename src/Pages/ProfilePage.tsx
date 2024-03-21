@@ -29,7 +29,7 @@ const ProfilePage = () => {
     // const handleOpenModal = () => {setShowModal(true)};
     // const handleCloseModal = () => {setShowModal(false)};
 
-    useEffect(() => {
+/*     useEffect(() => {
         const fetchUserData = async () => {
             try {
                 const response = await fetch('https://honorclock.up.railway.app/HC/Users');
@@ -54,14 +54,14 @@ const ProfilePage = () => {
 
     if (error) {
         return <div>Error: {error}</div>;
-    }
+    } */
 
     return (
-        <div className="container w-100 mt-5 pt-5">
+        <div className=" container-profile w-100 mt-5 pt-5 ">
             {/* <Navbar isLoggedIn={true} /> aquí quiero que traiga un icono de estar logado para deslogarse, pero no se como hacerlo */}
-            <div className="row">
+            <div className="row containers m-5">
  
-    <div className="col-sm-6">
+    <div className="col-sm-6 ">
         <div className="row">
             <div className="col-sm-3">
                 <h4>Nombre:</h4>
