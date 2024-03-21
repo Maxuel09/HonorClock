@@ -5,6 +5,8 @@ import Rebajas from "../Pages/Rebajas";
 import Root from "../Routes/Root";
 import AuthForm from "../Pages/AuthForm";
 import Categories from "../Pages/Categories";
+import ProfilePage from "../Pages/ProfilePage";
+import ProductDetail from "../Pages/ProductDetail";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -33,7 +35,17 @@ const router = createBrowserRouter([
             {
                 path: "/HC/Categorias",
                 element: <Categories />
+            },
+            {
+                path: "/HC/Perfil",
+                element: <ProfilePage />
+            },
+
+            {
+                path: "/HC/Productos/:productById", 
+                element: <ProductDetail />
             }
+
         ]
 
     },

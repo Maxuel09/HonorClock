@@ -1,27 +1,29 @@
-// import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import { useState, useEffect } from 'react';
 import CardProduct from "../Components/CardProduct/CardProduct";
 import "../Css/Categories.css";
 import categorias from "../Assets/Img/categorias.png";
 
+
 interface Product {
-      name: string;
-      description: string;
-      price: number;
-      category: string;
-      image: string;
-  }
+    name: string;
+    description: string;
+    price: number;
+    category: string;
+    image: string;
+    _id: string;
+}
 
 const Categories = () => {
 
-      const [products, setProducts] = useState<Product[]>([]);
-      const [selectedCategory, setSelectedCategory] = useState('Todos');
-  
-      useEffect(() => {
-          // Función para cargar los productos de la base de datos
-          const fetchProducts = async () => {
-              try {
+    const [products, setProducts] = useState<Product[]>([]);
+    const [selectedCategory, setSelectedCategory] = useState('Todos');
+
+    useEffect(() => {
+        // Función para cargar los productos de la base de datos
+        const fetchProducts = async () => {
+            try {
 
                   const response = await fetch('https://honorclock.up.railway.app/HC/Product');
                   const data = await response.json();
@@ -45,7 +47,7 @@ const Categories = () => {
           : products.filter(product => product.category === selectedCategory);
 
   return (
-    <section className='container_categories'>
+    <section className='container_categories mt-5'>
        <div className="column justify-content-center">
           <div className="col-12 col-md-12 text-center "><img src={categorias} alt="Categorías" style={{ width: "100%", maxWidth: "500px", marginBottom: "2.5em", marginTop: "3em"}} />
           </div>
@@ -65,7 +67,9 @@ const Categories = () => {
           {filteredProducts.map((product, index) => (
               <div key={index} className="col-12 col-md-3 mb-4" >
                 <div className="d-flex justify-content-center">
-                    <CardProduct product={product} />
+                      <Link to={`/HC/Productos/${product._id}`} key={product._id}>
+                          <CardProduct productCard={product} />
+                      </Link>
                 </div>
               </div>
           ))}

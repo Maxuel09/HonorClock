@@ -6,14 +6,9 @@ import Footer from "../Components/Footer/Footer"
 const Root = () => {
     return (
         <>
-
             <Navbar />
             <Outlet />
-
-
             <Footer />
-
-
         </>
     )
 }
