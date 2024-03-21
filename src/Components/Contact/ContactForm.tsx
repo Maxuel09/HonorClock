@@ -23,7 +23,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
  return ( 
         
     <div className="container mt-5 p-5 col-12 border rounded border-dark">
-      <h3>¿En qué podemos ayudarte?</h3>
+      <h3 className="text-white">¿En qué podemos ayudarte?</h3>
     <Form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-6">
