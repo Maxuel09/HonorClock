@@ -1,5 +1,5 @@
-import { AccessTokenResponse } from "../../Types/Types";
-import { API_URL } from "../Auth/AuthConstants";
+
+import { API_URL } from "../Api/ConnectionToApi";
 
 export default async function requestNewAccessToken(refreshToken: string) {
     const response = await fetch(`${API_URL}/refresh-token`, {
@@ -11,7 +11,7 @@ export default async function requestNewAccessToken(refreshToken: string) {
     });
 
     if (response.ok) {
-        const json = (await response.json()) as AccessTokenResponse;
+        const json = await response.json();
 
         if (json.error) {
             throw new Error(json.error);

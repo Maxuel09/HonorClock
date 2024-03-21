@@ -1,8 +1,8 @@
 import { useContext, createContext, useState, useEffect } from "react";
-import type { AuthResponse, User } from "../../Types/Types";
-import requestNewAccessToken from "../Auth/RequestNewAccessToken";
-import { API_URL } from "../Auth/AuthConstants";
-import React from 'react';
+import { API_URL } from "./ConnectionToApi";
+import type { AuthResponse, User } from "../../../Types/Types";
+import RequestNewAccessToken from "./RequestNewAccessToken";
+
 
 const AuthContext = createContext({
     isAuthenticated: false,
@@ -33,6 +33,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
 
     function saveUser(userData: AuthResponse) {
+        console.log("saveUser", userData);
         setAccessTokenAndRefreshToken(
             userData.body.accessToken,
             userData.body.refreshToken
@@ -66,7 +67,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
 
     async function getNewAccessToken(refreshToken: string) {
-        const token = await requestNewAccessToken(refreshToken);
+        const token = await RequestNewAccessToken(refreshToken);
         if (token) {
             return token;
         }
@@ -88,7 +89,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         try {
             if (!!accessToken) {
                 //existe access token
-                const userInfo = await retrieveUserInfo(accessToken);
+                const userInfo = await retrieveUserInfo();
                 setUser(userInfo);
                 setAccessToken(accessToken);
                 setIsAuthenticated(true);
@@ -102,7 +103,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
                     //pedir nuevo access token
                     getNewAccessToken(refreshToken)
                         .then(async (newToken) => {
-                            const userInfo = await retrieveUserInfo(newToken!);
+                            const userInfo = await retrieveUserInfo();
                             setUser(userInfo);
                             setAccessToken(newToken!);
                             setIsAuthenticated(true);
@@ -142,13 +143,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
     );
 }
 
-async function retrieveUserInfo(accessToken: string) {
+async function retrieveUserInfo() {
     try {
         const response = await fetch(`${API_URL}/user`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${accessToken}`,
+                
             },
         });
 
