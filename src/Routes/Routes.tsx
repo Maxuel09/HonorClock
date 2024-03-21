@@ -3,10 +3,10 @@ import Home from "../Pages/Home";
 import Relojes from "../Pages/Relojes";
 import Rebajas from "../Pages/Rebajas";
 import Root from "../Routes/Root";
-import AuthForm from "../Pages/AuthForm";
 import Categories from "../Pages/Categories";
 import ProfilePage from "../Pages/ProfilePage";
 import ProductDetail from "../Pages/ProductDetail";
+import AuthForm from "../Pages/AuthForm";
 const router = createBrowserRouter([
     {
         path: "/",

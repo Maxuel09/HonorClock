@@ -19,9 +19,9 @@ const CardProduct = ({ productCard }: { productCard: ProductType }) => {
                     <div className="card-image-container">
                         <img src={productCard.image} alt={productCard.name} className="image-icon" />
                     </div>
-                    <p className="card-title">{productCard.name}</p>
+                    <h5 className="card-title text-white">{productCard.name}</h5>
                     {/* <p className="card-des">{product.description}</p> */}
-                    <p className="card-price">${productCard.price}</p>
+                    <p className="card-price text-white">${productCard.price}</p>
                 </div>
             </section>
         </main>
