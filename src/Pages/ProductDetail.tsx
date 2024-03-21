@@ -25,7 +25,7 @@ const ProductDetail: React.FC = () => {
             <Container className="d-flex justify-content-center space-between mp-5">
                 <Row className=' text-white m-5'>
                     <Col>
-                        <Image src={product.image} className='h-100 border border-warning ' rounded alt="" />
+                        <Image src={product.image} className='w-75 border border-warning ' rounded alt="" />
                     </Col>
                     <Col className='d-flex flex-column'>
 
