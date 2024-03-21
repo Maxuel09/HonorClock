@@ -21,7 +21,7 @@ const ProductDetail: React.FC = () => {
         fetchProduct()
     }, [])
     return (
-        <div className="container_categories text-white">
+        <div className="container_categories text-white mt-5 mb-5">
             <Container className="d-flex justify-content-center space-between mp-5">
                 <Row className=' text-white m-5'>
                     <Col>
